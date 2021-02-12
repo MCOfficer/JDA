@@ -35,6 +35,13 @@ public class GuildMessageReactionAddEvent extends GenericGuildMessageReactionEve
         super(api, responseNumber, member, reaction, member.getIdLong());
     }
 
+    /**
+     * The reacting {@link net.dv8tion.jda.api.entities.User User}
+     *
+     * @return The reacting user
+     *
+     * @see    #getUserIdLong()
+     */
     @Nonnull
     @Override
     @SuppressWarnings("ConstantConditions")
@@ -43,6 +50,11 @@ public class GuildMessageReactionAddEvent extends GenericGuildMessageReactionEve
         return super.getUser();
     }
 
+    /**
+     * The {@link net.dv8tion.jda.api.entities.Member Member} instance for the reacting user
+     *
+     * @return The member instance for the reacting user
+     */
     @Nonnull
     @Override
     @SuppressWarnings("ConstantConditions")
